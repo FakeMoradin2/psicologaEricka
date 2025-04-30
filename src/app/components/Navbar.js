@@ -2,12 +2,26 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const pathname = usePathname();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const isActive = (path) => {
+        return pathname === path;
+    };
+
+    const linkStyles = (path) => {
+        return `transition-colors ${
+            isActive(path)
+            ? "text-pink-500 font-semibold"
+            : "text-gray-600 hover:text-pink-500"
+        }`;
     };
 
     return (
@@ -40,13 +54,13 @@ const Navbar = () => {
 
                         {/* Menú de escritorio */}
                         <div className="hidden lg:flex lg:items-center lg:space-x-8">
-                            <Link href="/" className="text-gray-600 hover:text-pink-500 transition-colors">
+                            <Link href="/" className={linkStyles("/")}>
                                 Inicio
                             </Link>
-                            <Link href="/sobre-mi" className="text-gray-600 hover:text-pink-500 transition-colors">
+                            <Link href="/sobre-mi" className={linkStyles("/sobre-mi")}>
                                 Sobre mí
                             </Link>
-                            <Link href="/servicios" className="text-gray-600 hover:text-pink-500 transition-colors">
+                            <Link href="/servicios" className={linkStyles("/servicios")}>
                                 Servicios
                             </Link>
                         </div>
@@ -57,21 +71,21 @@ const Navbar = () => {
                         <div className="flex flex-col space-y-4">
                             <Link 
                                 href="/" 
-                                className="text-gray-600 hover:text-pink-500 transition-colors px-2 py-1 rounded-md hover:bg-gray-100"
+                                className={`${linkStyles("/")} px-2 py-1 rounded-md hover:bg-gray-100`}
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Inicio
                             </Link>
                             <Link 
                                 href="/sobre-mi" 
-                                className="text-gray-600 hover:text-pink-500 transition-colors px-2 py-1 rounded-md hover:bg-gray-100"
+                                className={`${linkStyles("/sobre-mi")} px-2 py-1 rounded-md hover:bg-gray-100`}
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Sobre mí
                             </Link>
                             <Link 
                                 href="/servicios" 
-                                className="text-gray-600 hover:text-pink-500 transition-colors px-2 py-1 rounded-md hover:bg-gray-100"
+                                className={`${linkStyles("/servicios")} px-2 py-1 rounded-md hover:bg-gray-100`}
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Servicios

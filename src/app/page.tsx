@@ -81,165 +81,180 @@ export default function Home() {
       <main className={`min-h-screen bg-white ${heebo.className}`}>
         <Navbar />
         {/* Sección Hero */}
-        <section className="container mx-auto px-4 pt-20 text-center">
-          <div className="relative w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full">
-            <Image
-              src="/WhatsApp Image 2025-04-02 at 5.58.44 PM.jpeg"
-              alt="Éricka Psicoterapeuta"
-              width={128}
-              height={128}
-              className="w-full h-full object-cover"
-              priority
-            />
+        <section className="container mx-auto px-4 pt-20">
+          <div className="flex flex-col lg:flex-row items-center justify-between">
+            <div className="lg:w-1/2 text-center lg:text-left lg:pr-12">
+              <h1 className="text-black text-3xl lg:text-4xl font-bold mb-4">¡Hola! Soy Éricka,<br/>Psicoterapeuta<br/>Clínica.</h1>
+              <p className="text-black mb-6">
+                Mi pasión, es ayudarte a superar los desafíos y encontrar un sentido renovado en tu vida.
+              </p>
+              <p className="text-black mb-12">
+                Creo firmemente en el poder transformador de la terapia y en la capacidad de cada individuo para crecer y sanar.
+              </p>
+            </div>
+            <div className="lg:w-1/2 flex justify-center">
+              <div className="relative w-32 h-32 lg:w-64 lg:h-64 overflow-hidden rounded-full">
+                <Image
+                  src="/WhatsApp Image 2025-04-02 at 5.58.44 PM.jpeg"
+                  alt="Éricka Psicoterapeuta"
+                  width={256}
+                  height={256}
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
+            </div>
           </div>
-          <h1 className="text-black text-3xl font-bold mb-2">¡Hola! Soy Éricka,<br/>Psicoterapeuta<br/>Clínica.</h1>
-          <p className="text-black mb-6">
-            Mi pasión, es ayudarte a superar los desafíos y encontrar un sentido renovado en tu vida.
-          </p>
-          <p className="text-black mb-12">
-            Creo firmemente en el poder transformador de la terapia y en la capacidad de cada individuo para crecer y sanar.
-          </p>
         </section>
 
         {/* Sección Servicios */}
-        <section className="bg-[#A8DCD1] py-8">
+        <section className="bg-[#A8DCD1] py-12">
           <div className="container mx-auto px-4">
-            <div className="bg-white rounded-lg p-6 mb-4 shadow-sm">
-              <h3 className="text-black text-xl font-semibold mb-4">Psicología:</h3>
-              <p className="text-black">
-                La psicología es una disciplina que estudia la mente y el comportamiento. A través de la terapia, ayuda a las personas a comprender sus emociones, resolver conflictos y mejorar su bienestar emocional.
-              </p>
-              <Link href="/servicios#psicologia" className="text-blue-400 text-primary block mt-4 hover:text-primary/80">
-                Ver todo
-              </Link>
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="text-black text-xl font-semibold mb-4">Psicología:</h3>
+                <p className="text-black">
+                  La psicología es una disciplina que estudia la mente y el comportamiento. A través de la terapia, ayuda a las personas a comprender sus emociones, resolver conflictos y mejorar su bienestar emocional.
+                </p>
+                <Link href="/servicios#psicologia" className="text-blue-400 text-primary block mt-4 hover:text-primary/80">
+                  Ver todo
+                </Link>
+              </div>
 
-            <div className="bg-white rounded-lg p-6 mb-4 shadow-sm">
-              <h3 className="text-black text-xl font-semibold mb-4">MINDFULNESS:</h3>
-              <p className="text-black">
-                El mindfulness, o atención plena, es una técnica de meditación que consiste en prestar atención al momento presente sin juzgarlo. Es una práctica que proviene del budismo, pero que se ha vuelto popular en Occidente.
-              </p>
-              <Link href="/servicios#mindfulness" className="text-blue-400 text-primary block mt-4 hover:text-primary/80">
-                Ver todo
-              </Link>
-            </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="text-black text-xl font-semibold mb-4">MINDFULNESS:</h3>
+                <p className="text-black">
+                  El mindfulness, o atención plena, es una técnica de meditación que consiste en prestar atención al momento presente sin juzgarlo. Es una práctica que proviene del budismo, pero que se ha vuelto popular en Occidente.
+                </p>
+                <Link href="/servicios#mindfulness" className="text-blue-400 text-primary block mt-4 hover:text-primary/80">
+                  Ver todo
+                </Link>
+              </div>
 
-            <div className="bg-white rounded-lg p-6 mb-4 shadow-sm">
-              <h3 className="text-black text-xl font-semibold mb-4">Equinoterapia:</h3>
-              <p className="text-black">
-                Se trata de una disciplina ecuestre que aprovecha la relación afectiva que se establece con el caballo para ayudar a personas con problemas de adaptación social a superar sus conflictos y así integrarse de forma normalizada en la sociedad.
-              </p>
-              <Link href="/servicios#equinoterapia" className="text-blue-400 text-primary block mt-4 hover:text-primary/80">
-                Ver todo
-              </Link>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="text-black text-xl font-semibold mb-4">Equinoterapia:</h3>
+                <p className="text-black">
+                  Se trata de una disciplina ecuestre que aprovecha la relación afectiva que se establece con el caballo para ayudar a personas con problemas de adaptación social a superar sus conflictos y así integrarse de forma normalizada en la sociedad.
+                </p>
+                <Link href="/servicios#equinoterapia" className="text-blue-400 text-primary block mt-4 hover:text-primary/80">
+                  Ver todo
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Sección Contacto */}
-        <section className="container mx-auto px-4 py-8">
-          <h2 className="text-black text-2xl font-bold mb-6">Contáctame</h2>
-          <form className="space-y-4" onSubmit={handleSubmit}>
+        {/* Sección Contacto y Ubicación */}
+        <section className="container mx-auto px-4 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Formulario */}
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-black">Nombre</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
-                required
-              />
+              <h2 className="text-black text-2xl font-bold mb-6">Contáctame</h2>
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-black">Nombre</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="surname" className="block text-sm font-medium text-black">Apellido</label>
+                    <input
+                      type="text"
+                      id="surname"
+                      name="surname"
+                      value={formData.surname}
+                      onChange={handleChange}
+                      className="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-black">Correo electrónico</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-black">Número de teléfono</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="mensaje" className="block text-sm font-medium text-black">Mensaje</label>
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    value={formData.mensaje}
+                    onChange={handleChange}
+                    rows={4}
+                    className="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-[#FF6464] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#FF6464]/90 transition-colors shadow-sm"
+                >
+                  Enviar
+                </button>
+              </form>
             </div>
-            <div>
-              <label htmlFor="surname" className="block text-sm font-medium text-black">Apellido</label>
-              <input
-                type="text"
-                id="surname"
-                name="surname"
-                value={formData.surname}
-                onChange={handleChange}
-                className="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-black">Correo electrónico</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-black">Número de teléfono</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                className="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
-              />
-            </div>
-            <div>
-              <label htmlFor="mensaje" className="block text-sm font-medium text-black">Mensaje</label>
-              <textarea
-                id="mensaje"
-                name="mensaje"
-                value={formData.mensaje}
-                onChange={handleChange}
-                rows={4}
-                className="text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-[#FF6464] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#FF6464]/90 transition-colors shadow-sm"
-            >
-              Enviar
-            </button>
-          </form>
 
-          {/* Sección Ubicación */}
-          <div className="mt-12">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7168906465117!2d-106.09108892393611!3d28.635299882418786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea43262c43b33f%3A0x4498e5c7e0937df5!2sCalle%20Cedro%20406%2C%20Granjas%2C%2031100%20Chihuahua%2C%20Chih.!5e0!3m2!1ses!2smx!4v1709595049943!5m2!1ses!2smx"
-              className="h-64 w-full rounded-lg shadow-md border-0"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <div className="space-y-4 mt-4">
-              <div>
-                <h3 className="text-black flex items-center text-lg font-semibold">
-                  <span className="mr-2">📍</span> Ubicación | Chihuahua, Chihuahua
-                </h3>
-                <p className="ml-6 text-black">
-                  Calle Cedro 406<br />
-                  Col. Granjas
-                </p>
-              </div>
-              <div>
-                <h3 className="text-black flex items-center text-lg font-semibold">
-                  <span className="mr-2">📅</span> Agenda | haz una cita
-                </h3>
-                <p className="ml-6 text-black">
-                  WhatsApp<br />
-                  614 107 77 60
-                </p>
+            {/* Mapa y Ubicación */}
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7168906465117!2d-106.09108892393611!3d28.635299882418786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea43262c43b33f%3A0x4498e5c7e0937df5!2sCalle%20Cedro%20406%2C%20Granjas%2C%2031100%20Chihuahua%2C%20Chih.!5e0!3m2!1ses!2smx!4v1709595049943!5m2!1ses!2smx"
+                className="w-full h-64 lg:h-96 rounded-lg shadow-md border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div className="space-y-4 mt-4">
+                <div>
+                  <h3 className="text-black flex items-center text-lg font-semibold">
+                    <span className="mr-2">📍</span> Ubicación | Chihuahua, Chihuahua
+                  </h3>
+                  <p className="ml-6 text-black">
+                    Calle Cedro 406<br />
+                    Col. Granjas
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-black flex items-center text-lg font-semibold">
+                    <span className="mr-2">📅</span> Agenda | haz una cita
+                  </h3>
+                  <p className="ml-6 text-black">
+                    WhatsApp<br />
+                    614 107 77 60
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Footer con redes sociales */}
-        <footer className="bg-white py-8">
+        <footer className="bg-white py-8 border-t">
           <div className="container mx-auto px-4">
             <div className="flex justify-center space-x-6 mb-4">
               <a href="#" className="text-[#21243D] hover:text-[#21243D]/80 transition-colors">
