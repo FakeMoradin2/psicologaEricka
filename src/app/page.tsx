@@ -82,18 +82,18 @@ export default function Home() {
         <Navbar />
         {/* Sección Hero */}
         <section className="container mx-auto px-4 pt-20">
-          <div className="flex flex-col lg:flex-row items-center justify-between">
+          <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8">
             <div className="lg:w-1/2 text-center lg:text-left lg:pr-12">
               <h1 className="text-black text-3xl lg:text-4xl font-bold mb-4">¡Hola! Soy Éricka,<br/>Psicoterapeuta<br/>Clínica.</h1>
-              <p className="text-black mb-6">
+              <p className="text-black mb-6 text-lg">
                 Mi pasión, es ayudarte a superar los desafíos y encontrar un sentido renovado en tu vida.
               </p>
-              <p className="text-black mb-12">
+              <p className="text-black mb-8 text-lg">
                 Creo firmemente en el poder transformador de la terapia y en la capacidad de cada individuo para crecer y sanar.
               </p>
             </div>
-            <div className="lg:w-1/2 flex justify-center">
-              <div className="relative w-32 h-32 lg:w-64 lg:h-64 overflow-hidden rounded-full">
+            <div className="lg:w-1/2 flex justify-center mb-8 lg:mb-0">
+              <div className="relative w-48 h-48 lg:w-64 lg:h-64 overflow-hidden rounded-full">
                 <Image
                   src="/WhatsApp Image 2025-04-02 at 5.58.44 PM.jpeg"
                   alt="Éricka Psicoterapeuta"

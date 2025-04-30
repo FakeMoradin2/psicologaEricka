@@ -57,7 +57,7 @@ const Navbar = () => {
                             <Link href="/" className={linkStyles("/")}>
                                 Inicio
                             </Link>
-                            <Link href="/sobre-mi" className={linkStyles("/sobre-mi")}>
+                            <Link href="/sobremi" className={linkStyles("/sobremi")}>
                                 Sobre mí
                             </Link>
                             <Link href="/servicios" className={linkStyles("/servicios")}>
@@ -77,8 +77,8 @@ const Navbar = () => {
                                 Inicio
                             </Link>
                             <Link 
-                                href="/sobre-mi" 
-                                className={`${linkStyles("/sobre-mi")} px-2 py-1 rounded-md hover:bg-gray-100`}
+                                href="/sobremi" 
+                                className={`${linkStyles("/sobremi")} px-2 py-1 rounded-md hover:bg-gray-100`}
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Sobre mí
